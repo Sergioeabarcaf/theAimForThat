@@ -29,6 +29,9 @@ class ViewController: UIViewController {
         
         present(alert, animated: true)
     }
+    @IBAction func sliderPoint(_ sender: UISlider) {
+        print("El valor del slide es: \(sender.value)")
+    }
     
 }
 
