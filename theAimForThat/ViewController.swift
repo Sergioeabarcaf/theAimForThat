@@ -21,7 +21,13 @@ class ViewController: UIViewController {
     }
 
     @IBAction func showAlert() {
-        print("se ha apretado")
+        let alert = UIAlertController(title: "Hola Mundo", message: "Ete mensaje es de la descripcion de la alerta", preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "genial!", style: .default, handler: nil)
+        
+        alert.addAction(action)
+        
+        present(alert, animated: true)
     }
     
 }
