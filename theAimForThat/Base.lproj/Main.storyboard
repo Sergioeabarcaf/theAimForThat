@@ -102,6 +102,9 @@
                                 <state key="normal" title="Reset">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AF2-SP-GDY"/>
+                                </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="DcH-aR-Y9X">
                                 <rect key="frame" x="82.621771045394325" y="173" width="499.99999999999989" height="30.000000000000036"/>
@@ -138,6 +141,12 @@
                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="roundsLabel" destination="vnW-Cb-sJB" id="stz-fE-Kfh"/>
+                        <outlet property="scoreLabels" destination="Iit-XH-epx" id="a27-an-XAH"/>
+                        <outlet property="slider" destination="DcH-aR-Y9X" id="Jcf-yo-tbJ"/>
+                        <outlet property="targetLabel" destination="i5Z-uj-4ZH" id="LU6-sS-CSd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
