@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     var scoreValue : Int = 0
     var differenceValue : Int = 0
     var point : Int = 0
+    var tittle : String = "Titulo"
 
     @IBOutlet weak var scoreLabels: UILabel!
     @IBOutlet weak var roundsLabel: UILabel!
@@ -37,23 +38,37 @@ class ViewController: UIViewController {
         
         self.differenceValue = Int((self.currentValue - self.targetValue).magnitude)
         
-        self.point = differenceValue > 0 ? 100 - differenceValue : 1000
+        self.point = 100 - self.differenceValue
         
-        self.scoreValue += self.point
+        switch self.differenceValue {
+        case 0:
+            self.tittle = "¡¡¡ Puntuación perfecta !!! "
+            self.point *= 10
+        case 1...5:
+            self.tittle = "Caaaasii... perfecto"
+            self.point *= 5
+        case 6...12:
+            self.tittle = "Te estas escapando del objetivo"
+            self.point *= 3
+        default:
+            self.tittle = "Me saliste bastante timida"
+        }
         
         let mensaje = """
         tu puntaje es \(self.point)
         """
         
-        let alert = UIAlertController(title: "Puntuacion", message: mensaje, preferredStyle: .alert)
+        let alert = UIAlertController(title: self.tittle, message: mensaje, preferredStyle: .alert)
         
-        let action = UIAlertAction(title: "genial!", style: .default, handler: nil)
+        let action = UIAlertAction(title: "Vamos por otra!", style: .default, handler: {
+            action in
+                self.nuevaRonda()
+            })
         
         alert.addAction(action)
         
         present(alert, animated: true)
         
-        nuevaRonda()
     }
     @IBAction func sliderPoint(_ sender: UISlider) {
         self.currentValue = lroundf(sender.value)
@@ -62,11 +77,13 @@ class ViewController: UIViewController {
     @IBAction func reset(_ sender: UIButton) {
         resetValues()
     }
+    
     func nuevaRonda(){
         self.targetValue = Int(arc4random_uniform(100) + 1)
         self.currentValue = 50
         self.slider.value = Float(self.currentValue)
         self.roundsValue += 1
+        self.scoreValue += self.point
         actualizarLabels()
     }
     
