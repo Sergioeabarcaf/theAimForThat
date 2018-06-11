@@ -54,18 +54,16 @@ class ViewController: UIViewController {
             self.tittle = "Me saliste bastante timida"
         }
         
-        let mensaje = """
-        tu puntaje es \(self.point)
-        """
+        let mensaje = "tú puntaje es \(self.point)"
         
-        let alert = UIAlertController(title: self.tittle, message: mensaje, preferredStyle: .alert)
+        let alert = UIAlertController(title: self.tittle, message: mensaje, preferredStyle: .alert )
         
-        let action = UIAlertAction(title: "Vamos por otra!", style: .default, handler: {
+        let continueAction = UIAlertAction(title: "Vamos por otra!", style: .default, handler: {
             action in
                 self.nuevaRonda()
             })
         
-        alert.addAction(action)
+        alert.addAction(continueAction)
         
         present(alert, animated: true)
         
@@ -75,8 +73,24 @@ class ViewController: UIViewController {
     }
     
     @IBAction func reset(_ sender: UIButton) {
-        resetValues()
+        let mensaje: String = "Seguro que quieres reiniciar y perder tus \(self.scoreValue) puntos"
+        
+        let alert = UIAlertController(title: "Reiniciar", message: mensaje, preferredStyle: .actionSheet)
+        
+        let confirmReset = UIAlertAction(title: "Si", style: .destructive, handler: {
+            action in
+            self.resetValues()
+        })
+        
+        let notReset = UIAlertAction(title: "No", style: .default )
+        
+        alert.addAction(notReset)
+        alert.addAction(confirmReset)
+        
+        
+        present(alert, animated: true)
     }
+    
     
     func nuevaRonda(){
         self.targetValue = Int(arc4random_uniform(100) + 1)
@@ -94,10 +108,11 @@ class ViewController: UIViewController {
     }
     
     func resetValues(){
-        self.roundsValue = 0
+        self.roundsValue = 1
         self.scoreValue = 0
         self.targetValue = Int(arc4random_uniform(100) + 1)
         self.currentValue = 50
+        self.slider.value = Float(self.currentValue)
         actualizarLabels()
     }
     
