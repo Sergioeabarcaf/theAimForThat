@@ -1,5 +1,5 @@
 //
-//  aboutUsViewController.swift
+//  AboutUsViewController.swift
 //  theAimForThat
 //
 //  Created by Sergio Abarca Flores on 11-06-18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class aboutUsViewController: UIViewController {
+class AboutUsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +21,9 @@ class aboutUsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func regresar(){
+        dismiss(animated: true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation
