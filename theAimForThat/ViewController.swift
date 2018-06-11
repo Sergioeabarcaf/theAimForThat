@@ -79,7 +79,7 @@ class ViewController: UIViewController {
         
         let confirmReset = UIAlertAction(title: "Si", style: .destructive, handler: {
             action in
-            self.resetValues()
+                self.resetValues()
         })
         
         let notReset = UIAlertAction(title: "No", style: .default )

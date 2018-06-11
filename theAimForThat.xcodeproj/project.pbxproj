@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06AA6E9720CEA19B00F0AC75 /* aboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AA6E9620CEA19B00F0AC75 /* aboutUsViewController.swift */; };
 		06C33F4D20C017AB0097D7A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C33F4C20C017AB0097D7A8 /* AppDelegate.swift */; };
 		06C33F4F20C017AB0097D7A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C33F4E20C017AB0097D7A8 /* ViewController.swift */; };
 		06C33F5220C017AB0097D7A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06C33F5020C017AB0097D7A8 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06AA6E9620CEA19B00F0AC75 /* aboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aboutUsViewController.swift; sourceTree = "<group>"; };
 		06C33F4920C017AB0097D7A8 /* theAimForThat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = theAimForThat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06C33F4C20C017AB0097D7A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06C33F4E20C017AB0097D7A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 				06C33F4C20C017AB0097D7A8 /* AppDelegate.swift */,
 				06C33F4E20C017AB0097D7A8 /* ViewController.swift */,
 				06C33F5020C017AB0097D7A8 /* Main.storyboard */,
+				06AA6E9620CEA19B00F0AC75 /* aboutUsViewController.swift */,
 				06C33F5320C017AF0097D7A8 /* Assets.xcassets */,
 				06C33F5520C017AF0097D7A8 /* LaunchScreen.storyboard */,
 				06C33F5820C017AF0097D7A8 /* Info.plist */,
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06AA6E9720CEA19B00F0AC75 /* aboutUsViewController.swift in Sources */,
 				06C33F4F20C017AB0097D7A8 /* ViewController.swift in Sources */,
 				06C33F4D20C017AB0097D7A8 /* AppDelegate.swift in Sources */,
 			);
