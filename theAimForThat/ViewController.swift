@@ -26,7 +26,29 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        setupSlider()
         nuevaRonda()
+        
+    }
+    
+    func setupSlider(){
+        let thumbImageNormal = UIImage(named: "SliderThumb-Normal")
+        let thumbImageHighlighted = UIImage(named: "SliderThumb-Highlighted")
+        let trackImageLeft = UIImage(named: "SliderTrackLeft")
+        let trackImageRight = UIImage(named: "SliderTrackRight")
+        let insets = UIEdgeInsets(top: 0, left: 14, bottom: 0, right: 14)
+        
+        self.slider.setThumbImage(thumbImageNormal, for: .normal)
+        self.slider.setThumbImage(thumbImageHighlighted, for: .highlighted)
+        
+        let trackLeftResizable = trackImageLeft?.resizableImage(withCapInsets: insets)
+        let trackRightRezisable = trackImageRight?.resizableImage(withCapInsets: insets)
+        
+        self.slider.setMinimumTrackImage(trackLeftResizable, for: .normal)
+        self.slider.setMaximumTrackImage(trackRightRezisable, for: .normal)
+        
+        
+    
     }
 
     override func didReceiveMemoryWarning() {
