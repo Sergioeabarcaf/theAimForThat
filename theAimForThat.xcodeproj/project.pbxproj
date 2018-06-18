@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		06AA6E9F20CEAC3100F0AC75 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AA6E9C20CEAA1500F0AC75 /* AboutUsViewController.swift */; };
+		06AA6EA120D7DA8B00F0AC75 /* about.html in Resources */ = {isa = PBXBuildFile; fileRef = 06AA6EA020D7DA8B00F0AC75 /* about.html */; };
 		06C33F4D20C017AB0097D7A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C33F4C20C017AB0097D7A8 /* AppDelegate.swift */; };
 		06C33F4F20C017AB0097D7A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C33F4E20C017AB0097D7A8 /* ViewController.swift */; };
 		06C33F5220C017AB0097D7A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06C33F5020C017AB0097D7A8 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		06AA6E9C20CEAA1500F0AC75 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
+		06AA6EA020D7DA8B00F0AC75 /* about.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = about.html; sourceTree = "<group>"; };
 		06C33F4920C017AB0097D7A8 /* theAimForThat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = theAimForThat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06C33F4C20C017AB0097D7A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06C33F4E20C017AB0097D7A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 		06C33F4B20C017AB0097D7A8 /* theAimForThat */ = {
 			isa = PBXGroup;
 			children = (
+				06AA6EA020D7DA8B00F0AC75 /* about.html */,
 				06C33F4C20C017AB0097D7A8 /* AppDelegate.swift */,
 				06C33F4E20C017AB0097D7A8 /* ViewController.swift */,
 				06C33F5020C017AB0097D7A8 /* Main.storyboard */,
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06AA6EA120D7DA8B00F0AC75 /* about.html in Resources */,
 				06C33F5720C017AF0097D7A8 /* LaunchScreen.storyboard in Resources */,
 				06C33F5420C017AF0097D7A8 /* Assets.xcassets in Resources */,
 				06C33F5220C017AB0097D7A8 /* Main.storyboard in Resources */,
