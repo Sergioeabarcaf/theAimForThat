@@ -18,6 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="zmS-0c-kYV">
+                                <rect key="frame" x="0.0" y="-1" width="667" height="376"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKl-qi-Wx0">
                                 <rect key="frame" x="272" y="21" width="57" height="21.000000000000057"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -153,9 +157,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ayg-Qu-egD">
-                                <rect key="frame" x="157" y="301" width="353" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ayg-Qu-egD">
+                                <rect key="frame" x="157" y="318" width="353" height="37"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Volver al Juego" backgroundImage="Button-Normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -167,9 +170,8 @@
                                     <action selector="regresar:" destination="5VY-Ea-qgL" eventType="touchUpInside" id="URM-bU-fXM"/>
                                 </connections>
                             </button>
-                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DlX-8j-Tne">
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DlX-8j-Tne">
                                 <rect key="frame" x="20" y="20" width="627" height="273"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -178,6 +180,15 @@
                             </wkWebView>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DlX-8j-Tne" firstAttribute="leading" secondItem="SQc-1a-Qa7" secondAttribute="leading" constant="20" id="9ic-Od-Xb7"/>
+                            <constraint firstItem="SQc-1a-Qa7" firstAttribute="trailing" secondItem="Ayg-Qu-egD" secondAttribute="trailing" constant="157" id="FsO-53-aT5"/>
+                            <constraint firstItem="SQc-1a-Qa7" firstAttribute="trailing" secondItem="DlX-8j-Tne" secondAttribute="trailing" constant="20" id="TwV-bR-djl"/>
+                            <constraint firstItem="Ayg-Qu-egD" firstAttribute="leading" secondItem="SQc-1a-Qa7" secondAttribute="leading" constant="157" id="cqU-4P-Dix"/>
+                            <constraint firstItem="DlX-8j-Tne" firstAttribute="top" secondItem="SQc-1a-Qa7" secondAttribute="top" constant="20" id="q8t-be-JWN"/>
+                            <constraint firstItem="SQc-1a-Qa7" firstAttribute="bottom" secondItem="Ayg-Qu-egD" secondAttribute="bottom" constant="20" id="utg-Hs-JI6"/>
+                            <constraint firstItem="Ayg-Qu-egD" firstAttribute="top" secondItem="DlX-8j-Tne" secondAttribute="bottom" constant="25" id="v4y-u9-BtU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="SQc-1a-Qa7"/>
                     </view>
                     <connections>
@@ -191,6 +202,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Background" width="480" height="320"/>
         <image name="Button-Highlighted" width="100" height="37"/>
         <image name="Button-Normal" width="100" height="37"/>
         <image name="InfoButton" width="10" height="22"/>
