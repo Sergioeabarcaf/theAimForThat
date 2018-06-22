@@ -94,14 +94,14 @@ class ViewController: UIViewController {
         self.currentValue = lroundf(sender.value)
     }
     
-    @IBAction func reset(_ sender: UIButton) {
+    @IBAction func resetNew() {
         let mensaje: String = "Seguro que quieres reiniciar y perder tus \(self.scoreValue) puntos"
         
         let alert = UIAlertController(title: "Reiniciar", message: mensaje, preferredStyle: .actionSheet)
         
         let confirmReset = UIAlertAction(title: "Si", style: .destructive, handler: {
             action in
-                self.resetValues()
+            self.resetValues()
         })
         
         let notReset = UIAlertAction(title: "No", style: .default )
@@ -112,7 +112,6 @@ class ViewController: UIViewController {
         
         present(alert, animated: true)
     }
-    
     
     func nuevaRonda(){
         self.targetValue = Int(arc4random_uniform(100) + 1)
