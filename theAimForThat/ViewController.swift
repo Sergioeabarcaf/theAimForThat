@@ -97,7 +97,7 @@ class ViewController: UIViewController {
     @IBAction func resetNew() {
         let mensaje: String = "Seguro que quieres reiniciar y perder tus \(self.scoreValue) puntos"
         
-        let alert = UIAlertController(title: "Reiniciar", message: mensaje, preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: "Reiniciar", message: mensaje, preferredStyle: .alert)
         
         let confirmReset = UIAlertAction(title: "Si", style: .destructive, handler: {
             action in
