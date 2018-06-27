@@ -46,9 +46,6 @@ class ViewController: UIViewController {
         
         self.slider.setMinimumTrackImage(trackLeftResizable, for: .normal)
         self.slider.setMaximumTrackImage(trackRightRezisable, for: .normal)
-        
-        
-    
     }
 
     override func didReceiveMemoryWarning() {
@@ -108,8 +105,7 @@ class ViewController: UIViewController {
         
         alert.addAction(notReset)
         alert.addAction(confirmReset)
-        
-        
+
         present(alert, animated: true)
     }
     
@@ -126,6 +122,13 @@ class ViewController: UIViewController {
         self.targetLabel.text = String(self.targetValue)
         self.roundsLabel.text = String(self.roundsValue)
         self.scoreLabels.text = String(self.scoreValue)
+        
+        let transition = CATransition()
+        transition.type = kCATransitionFromBottom
+        transition.duration = 0.5
+        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+        
+        self.view.layer.add(transition, forKey: nil)
     }
     
     func resetValues(){
