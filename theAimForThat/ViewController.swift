@@ -63,16 +63,16 @@ class ViewController: UIViewController {
         
         switch self.differenceValue {
         case 0:
-            self.tittle = "¡¡¡ Puntuación perfecta !!! "
+            self.tittle = "¡¡¡ Puntuación perfecta 🎉🎉🎉 !!! "
             self.point *= 10
         case 1...5:
-            self.tittle = "Caaaasii... perfecto"
+            self.tittle = "Caaaasii... perfecto 😇😇😇"
             self.point *= 5
         case 6...12:
-            self.tittle = "Te estas escapando del objetivo"
+            self.tittle = "Te estas escapando del objetivo 😕😕😕"
             self.point *= 3
         default:
-            self.tittle = "Me saliste bastante timida"
+            self.tittle = "NOOOO!!! 🤦🏽‍♂️🤦🏽‍♂️🤦🏽‍♂️"
         }
         
         let mensaje = "tú puntaje es \(self.point)"
@@ -164,7 +164,20 @@ class ViewController: UIViewController {
         self.timeLabel.text = String(self.time)
         
         if(self.time <= 0){
-            self.nuevaRonda()
+            let alert = UIAlertController(title: "Tiempo Acabado 😔😔😔", message: nil, preferredStyle: .alert )
+            
+            let continueAction = UIAlertAction(title: "Vamos de nuevo!", style: .default, handler: {
+                action in
+                self.nuevaRonda()
+            })
+            
+            alert.addAction(continueAction)
+            
+            present(alert, animated: true)
+            
+            if(self.timer != nil){
+                self.timer?.invalidate()
+            }
         }
     }
     
