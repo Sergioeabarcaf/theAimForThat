@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var targetLabel: UILabel!
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var maxScoreLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -134,6 +135,15 @@ class ViewController: UIViewController {
         self.scoreLabels.text = String(self.scoreValue)
         self.timeLabel.text = String(self.time)
         
+        let maxScore = UserDefaults.standard.integer(forKey: "maxscore")
+        if (maxScore < self.scoreValue){
+            UserDefaults.standard.set(self.scoreValue, forKey: "maxscore")
+            self.maxScoreLabel.text = String(self.scoreValue)
+        }
+        else{
+            self.maxScoreLabel.text = String(maxScore)
+        }
+        
         let transition = CATransition()
         transition.type = kCATransitionFromBottom
         transition.duration = 0.5
@@ -156,6 +166,12 @@ class ViewController: UIViewController {
         
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.tickTac), userInfo: nil, repeats: true)
         
+        let maxScore = UserDefaults.standard.integer(forKey: "maxscore")
+        
+        if (maxScore < self.scoreValue){
+            UserDefaults.standard.set(self.scoreValue, forKey: "maxscore")
+        }
+        
         actualizarLabels()
     }
     
@@ -164,6 +180,7 @@ class ViewController: UIViewController {
         self.timeLabel.text = String(self.time)
         
         if(self.time <= 0){
+            
             let alert = UIAlertController(title: "Tiempo Acabado 😔😔😔", message: nil, preferredStyle: .alert )
             
             let continueAction = UIAlertAction(title: "Vamos de nuevo!", style: .default, handler: {
