@@ -17,18 +17,20 @@ class ViewController: UIViewController {
     var differenceValue : Int = 0
     var point : Int = 0
     var tittle : String = "Titulo"
+    var time : Int = 20
+    var timer : Timer?
 
     @IBOutlet weak var scoreLabels: UILabel!
     @IBOutlet weak var roundsLabel: UILabel!
     @IBOutlet weak var targetLabel: UILabel!
     @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var timeLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         setupSlider()
         nuevaRonda()
-        
     }
     
     func setupSlider(){
@@ -115,6 +117,14 @@ class ViewController: UIViewController {
         self.slider.value = Float(self.currentValue)
         self.roundsValue += 1
         self.scoreValue += self.point
+        self.time = 20
+        
+        if(self.timer != nil){
+            self.timer?.invalidate()
+        }
+        
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.tickTac), userInfo: nil, repeats: true)
+        
         actualizarLabels()
     }
     
@@ -122,6 +132,7 @@ class ViewController: UIViewController {
         self.targetLabel.text = String(self.targetValue)
         self.roundsLabel.text = String(self.roundsValue)
         self.scoreLabels.text = String(self.scoreValue)
+        self.timeLabel.text = String(self.time)
         
         let transition = CATransition()
         transition.type = kCATransitionFromBottom
@@ -137,7 +148,24 @@ class ViewController: UIViewController {
         self.targetValue = Int(arc4random_uniform(100) + 1)
         self.currentValue = 50
         self.slider.value = Float(self.currentValue)
+        self.time = 20
+        
+        if(self.timer != nil){
+            self.timer?.invalidate()
+        }
+        
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.tickTac), userInfo: nil, repeats: true)
+        
         actualizarLabels()
+    }
+    
+    @objc func tickTac(){
+        self.time -= 1
+        self.timeLabel.text = String(self.time)
+        
+        if(self.time <= 0){
+            self.nuevaRonda()
+        }
     }
     
 }

@@ -73,17 +73,17 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="o8X-bd-FK3">
-                                <rect key="frame" x="294.5" y="329.5" width="78.5" height="20.5"/>
+                                <rect key="frame" x="280.5" y="320" width="107" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HqT-dj-fPo">
-                                        <rect key="frame" x="0.0" y="0.0" width="48" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="67.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
                                         <color key="textColor" red="0.99267536401748657" green="0.99597948789596558" blue="0.99583238363265991" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4it-yi-NEU">
-                                        <rect key="frame" x="58" y="0.0" width="20.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                        <rect key="frame" x="77.5" y="0.0" width="29.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
                                         <color key="textColor" red="0.99267536401748657" green="0.99597948789596558" blue="0.99583238363265991" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -189,6 +189,7 @@
                         <outlet property="scoreLabels" destination="Iit-XH-epx" id="a27-an-XAH"/>
                         <outlet property="slider" destination="DcH-aR-Y9X" id="Jcf-yo-tbJ"/>
                         <outlet property="targetLabel" destination="i5Z-uj-4ZH" id="LU6-sS-CSd"/>
+                        <outlet property="timeLabel" destination="4it-yi-NEU" id="r0M-Hj-LKN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
